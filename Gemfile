@@ -32,6 +32,16 @@ gem 'bootstrap-sass', '3.3.6'
 
 # use devise gem
 gem 'devise', '3.4.1'
+
+# use vacuum
+gem 'vacuum', '~> 1.4'
+
+# use ecs
+gem 'amazon-ecs'
+
+# use paperclip
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem 'aws-sdk', '~> 2'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
