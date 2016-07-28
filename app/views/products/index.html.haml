@@ -1,0 +1,48 @@
+%h1 Listing products
+
+/ %table
+/   %thead
+/     %tr
+/       %th Name
+/       %th Price
+/       %th Description
+/       %th Image
+/       %th Category
+/       %th
+/       %th
+/       %th
+
+/   %tbody
+/     - @products.each do |product|
+/       %tr
+/         %td= product.name
+/         %td= product.price
+/         %td= product.description
+/         %td= image_tag product.image.url(:thumb)
+/         %td= product.category_id
+/         %td= link_to 'Show', product
+/         %td= link_to 'Edit', edit_product_path(product)
+/         %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+/ %br
+
+/ ----------------
+- @products.each do |product|
+  %div.container 
+    = image_tag product.image.url(:thumb)
+    .row  
+      %h4 Name: 
+        = product.name
+    .row
+      %h5 Price:
+      = product.price
+    .row  
+      %h5 Des:    
+        = product.description
+        = product.category_id
+    = link_to 'Show', product
+    = link_to 'Edit', edit_product_path(product)
+    = link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+    %br
+
+= link_to 'New Product', new_product_path

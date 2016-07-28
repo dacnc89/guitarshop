@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'shops#index'
+  root to: 'products#index'
+  resources :products
   devise_for :users
 
   # The priority is based upon order of creation: first created -> highest priority.
