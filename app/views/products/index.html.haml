@@ -82,11 +82,11 @@
     / /.nav-collapse
     .container
       .col-md-12
-        .col-md-3
+        .well.col-md-3
           %h2
             Category
           = @products.first.category.name
-        .col-md-8.digg_pagination
+        .col-md-8
           .row
           - @products.each do |p|
             .col-md-3.column.productbox
@@ -98,20 +98,20 @@
                   %a.btn.btn-danger.btn-sm{:href => "#",:role => "button"} BUY
                 .pricetext 
                   =p.price
+        .text-center.digg_pagination
           = will_paginate @products
 
       
       %br
     / = link_to 'New Product', new_product_path
-    %footer#footer
-      .container
-        .copyright-row
-          %p
-            Copyright © 2016 Guitar Shop by Dac Nguyen
-            %a{:href =>"#"}
-              Home
-            |
-            %a{:href =>"#"} 
-              About
-            |
-            %a{:href =>"#"} Contact
+    %footer.col-md-122
+      .row.text-center 
+        %p
+          Copyright © 2016 Guitar Shop 
+          %a{:href =>"#"}
+            Home
+          |
+          %a{:href =>"#"} 
+            About
+          |
+          %a{:href =>"#"} Contact
