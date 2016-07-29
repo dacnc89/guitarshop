@@ -86,7 +86,7 @@
           %h2
             Category
           = @products.first.category.name
-        .col-md-8
+        .col-md-8.digg_pagination
           .row
           - @products.each do |p|
             .col-md-3.column.productbox
@@ -98,6 +98,7 @@
                   %a.btn.btn-danger.btn-sm{:href => "#",:role => "button"} BUY
                 .pricetext 
                   =p.price
+          = will_paginate @products
 
       
       %br

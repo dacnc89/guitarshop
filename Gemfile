@@ -42,6 +42,9 @@ gem 'amazon-ecs'
 # use paperclip
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk', '~> 2'
+
+# use will_paginate
+gem 'will_paginate', '~> 3.1.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
