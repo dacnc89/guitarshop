@@ -28,7 +28,7 @@ gem 'haml'
 gem 'haml-rails', '~> 0.9'
 
 # use bootstrap
-gem 'bootstrap-sass', '3.3.6'
+gem 'bootstrap-sass', '3.3.7'
 
 # use devise gem
 gem 'devise', '3.4.1'
