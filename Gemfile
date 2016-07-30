@@ -45,6 +45,14 @@ gem 'aws-sdk', '~> 2'
 
 # use will_paginate
 gem 'will_paginate', '~> 3.1.0'
+
+# use sunspot solr
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+
+# use sunspot
+gem 'sunspot', '~> 2.2', '>= 2.2.5'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
