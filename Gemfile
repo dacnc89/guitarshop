@@ -53,6 +53,9 @@ gem 'sunspot_solr'
 # use sunspot
 gem 'sunspot', '~> 2.2', '>= 2.2.5'
 
+# config for rake aborted error
+gem 'sprockets', '3.6.3'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

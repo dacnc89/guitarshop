@@ -86,19 +86,22 @@
         .well.col-md-3
           %h2
             Category
-          = @products.first.category.name
+          / = @products.first.category.name
+
+          =link_to "New product", new_product_path
         .col-md-8
           .row
           - @products.each do |p|
             .col-md-3.column.productbox
-              =image_tag p.image.url, :class => "img-responseve"
+
+              =link_to image_tag(p.image.url, :class => "img-responseve"), p
               .producttitle 
                 =p.name
               .productprice
                 .pull-right
                   %a.btn.btn-danger.btn-sm{:href => "#",:role => "button"} BUY
                 .pricetext 
-                  =p.price
+                  = number_to_currency(p.price)
         .text-center.digg_pagination
           = will_paginate @products
 
