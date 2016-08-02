@@ -1,10 +1,19 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
+
+  # def search_products
+    # @results = @search.results
+  # end
   # GET /products
   # GET /products.json
   def index
-    @products = Product.paginate(:page => params[:page], :per_page => 8)
+    @search = Product.search do
+      fulltext params[:search]
+      paginate :per_page => 8
+    end
+    
+    @products = @search.results#.paginate(:page => params[:page], :per_page => 8)
   end
 
   # GET /products/1

@@ -86,10 +86,16 @@
         .well.col-md-3
           %h2
             Category
-          / = @products.first.category.name
+          .row
+            - Category.all.each do |category|
+              %p
+                = link_to "#{category.name}", category
+          .row
+            = form_tag products_path, :method => :get do
+              = text_field_tag :search, params[:search]
+              = submit_tag "Search", :name => nil, :class => "glyphicon glyphicon-search"
 
-          =link_to "New product", new_product_path
-        .col-md-8
+        .col-md-9
           .row
           - @products.each do |p|
             .col-md-3.column.productbox
