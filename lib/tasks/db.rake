@@ -9,7 +9,7 @@ namespace :db do
     
     (1..25).each do |num|
       Product.create(
-        :category_id => 2,
+        :category_id => 1,
         :name => "Product #{num}",
         :price => 10*num,
         :description => "This is Product #{num}",

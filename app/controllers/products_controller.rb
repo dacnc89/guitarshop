@@ -8,12 +8,12 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @search = Product.search do
-      fulltext params[:search]
-      paginate :per_page => 8
-    end
+    # @search = Product.search do
+    #   fulltext params[:search]
+    #   paginate :per_page => 8
+    # end
     
-    @products = @search.results#.paginate(:page => params[:page], :per_page => 8)
+    @products = Product.all.paginate(:page => params[:page], :per_page => 8)
   end
 
   # GET /products/1

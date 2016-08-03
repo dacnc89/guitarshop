@@ -31,7 +31,7 @@ gem 'haml-rails', '~> 0.9'
 gem 'bootstrap-sass', '3.3.7'
 
 # use devise gem
-gem 'devise', '3.4.1'
+gem 'devise'
 
 # use vacuum
 gem 'vacuum', '~> 1.4'
